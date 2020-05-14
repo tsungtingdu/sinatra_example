@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinatra</title>
+</head>
+
+<body>
+  <h1>Sinatra Main Page</h1>
+  <a href="/new">Add new moive</a>
+  <ul>
+    <% @movies.each do |movie| %>
+      <li>
+        <a href="/<%= movie.id %>"><%= movie.title %></a>
+      </li>
+    <% end %>
+  </ul>
+</body>
+
+</html>
